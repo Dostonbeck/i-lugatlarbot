@@ -49,7 +49,7 @@ ${menu[0].transcrption}: [${res.data[0].phonetics[0].text}]
 ${menu[0].partOfSpeech}: ${res.data[0].meanings[0].partOfSpeech}
 ${menu[0].synonyms}: ${((res.data[0].meanings[0].definitions[0].synonyms).length===0)?"Sinonimi yo'q": (res.data[0].meanings[0].definitions[0].synonyms).map(item => {return ` ${item}`})}
 ${menu[0].antonyms}: ${((res.data[0].meanings[0].definitions[0].antonyms).length===0)?"Antonimi yo'q": (res.data[0].meanings[0].definitions[0].antonyms).map(item => {return ` ${item}`})}
-${menu[0].example}: ${res.data[0].meanings[0].definitions[0].example}.
+${(res.data[0].meanings[0].definitions[0]?.example)?menu[0].example+":"+res.data[0].meanings[0].definitions[0].example:""}
 
 ${menu[0].adversiment}`
     await ctx.replyWithHTML(matn)
