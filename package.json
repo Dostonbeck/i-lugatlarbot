@@ -1,0 +1,22 @@
+{
+  "name": "dictionary-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "dev": "nodemon bot.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "dotenv": "^16.0.0",
+    "mongoose": "^6.2.1",
+    "telegraf": "^4.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
